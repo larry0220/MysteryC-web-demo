@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Day1 Demo</title>
+  <style type="text/css">
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      background-color: lightgray;
+    }
+
+    #root {
+      padding-left: 50px;
+      width: 500px;
+    }
+
+    #watch-control {
+      position: relative;
+      height: 50px;
+    }
+
+    .center {
+      margin-left: 50px;
+    }
+
+    .btn-left {
+      position: absolute;
+      left: 20px;
+    }
+
+    .btn-right {
+      position: absolute;
+      left: 250px;
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.0.1/react.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.0.1/react-dom.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.js"></script>
+
+  <script>window.App = {};</script>
+  <script type="text/babel" src="./widgets/timer.js"></script>
+  <script type="text/babel" src="./components/WatchFace.js"></script>
+  <script type="text/babel" src="./components/WatchRecord.js"></script>
+  <script type="text/babel" src="./components/Button.js"></script>
+  <script type="text/babel" src="./components/WatchControl.js"></script>
+  <script type="text/babel" src="./containers/WatchApp.js"></script>
+
+  <script type="text/babel">
+    const { WatchApp } = window.App;
+    ReactDOM.render(
+      <WatchApp />,
+      document.getElementById('root')
+    );
+  </script>
+</body>
+</html>
